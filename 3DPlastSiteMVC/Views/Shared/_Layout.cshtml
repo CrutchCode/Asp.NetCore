@@ -1,0 +1,19 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    @await Html.PartialAsync("_MetategsPartial")
+    @await Html.PartialAsync("_CssPartial")
+</head>
+<body>
+    <div>
+        <!-- Header / Шапка -->
+        @await Html.PartialAsync("_HeaderPartial")
+
+        @RenderBody()
+        <!-- Footer -->
+        @await Html.PartialAsync("_FooterPartial")
+    </div>
+    <!-- Scripts -->
+    @await Html.PartialAsync("_ScriptsPartial")
+</body>
+</html>

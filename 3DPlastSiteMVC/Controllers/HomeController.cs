@@ -44,6 +44,25 @@ namespace _PlastSiteMVC.Controllers
         [HttpPost]
         public IActionResult LogIn(User user)
         {
+            var _courentUser = _dbContext.Users.FirstOrDefault();
+
+            if (user != null)
+            {
+                if (_courentUser.Name == user.Name)
+                {
+                    return View("Content");
+                }
+            }
+            return View("Error");
+        }
+        public IActionResult SignUp(int id)
+        {
+            ViewBag.UserId = id;
+            return View();
+        }
+        [HttpPost]
+        public IActionResult SignUp(User user)
+        {
             _dbContext.Add(user);
             _dbContext.SaveChanges();
             return Redirect("~/Home/Index");

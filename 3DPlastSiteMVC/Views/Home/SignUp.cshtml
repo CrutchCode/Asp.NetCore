@@ -1,0 +1,38 @@
+﻿@model _PlastSiteMVC.Models.User
+<!-- Main -->
+<div id="main" class="wrapper style1">
+    <div class="container xsmall">
+        <!-- Content -->
+        <section id="content">
+            <h3>Реєстрація</h3>
+            <form method="post" action="">
+                <div class="row gtr-uniform gtr-50">
+                    <div class="col-6 col-12">
+                        <input type="hidden" value="@ViewBag.UserId" name="Id" />
+                        <h3>Введіть ім'я: </h3>
+                        <input type="text" name="Name" />
+
+                        <h3>Введіть прізвище:</h3>
+                        <input type="text" name="MiddleName" />
+
+                        <h3>Введіть e-mail:</h3>
+                        <input type="text" name="UserEmail" />
+
+                        <h3>Введіть телефон:</h3>
+                        <input type="text" name="UserPhone" /><hr />
+
+                        <div class="col-6 col-12-medium">
+                            <input type="checkbox" id="human" name="human" checked>
+                            <label for="human">I am a human and not a robot</label>
+                        </div><br />
+
+                        <input type="submit" value="Отправить" />
+                    </div>
+                    <div>
+                        <a href="~/Home/LogIn">Увійти</a>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>

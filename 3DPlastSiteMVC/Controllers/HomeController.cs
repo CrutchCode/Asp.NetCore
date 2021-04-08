@@ -5,11 +5,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using _PlastSiteMVC.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace _PlastSiteMVC.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly PlastContext _dbContext;
+        public HomeController(PlastContext context)
+        {
+            _dbContext = context;
+        }
         public IActionResult Index()
         {
             return View();
@@ -29,6 +35,18 @@ namespace _PlastSiteMVC.Controllers
         public IActionResult ContentPageTwo()
         {
             return View();
+        }
+        public IActionResult LogIn(int id)
+        {
+            ViewBag.UserId = id;
+            return View();
+        }
+        [HttpPost]
+        public IActionResult LogIn(User user)
+        {
+            _dbContext.Add(user);
+            _dbContext.SaveChanges();
+            return Redirect("~/Home/Index");
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

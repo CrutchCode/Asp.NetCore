@@ -30,7 +30,7 @@ namespace _PlastSiteMVC
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddDbContext<PlastContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaulConnection")));
+            services.AddDbContext<PlastContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

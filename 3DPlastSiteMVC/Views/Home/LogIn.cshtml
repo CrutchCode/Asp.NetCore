@@ -1,0 +1,21 @@
+﻿@model _PlastSiteMVC.Models.User
+<!-- Main -->
+<div id="main" class="wrapper style1">
+    <div class="container" >
+        <!-- Content -->
+        <section id="content">
+            <form method="post" action="">
+                <input type="hidden" value="@ViewBag.UserId" name="Id" />
+                <p>Введіть ім'я: </p>
+                <input type="text" name="Name" />
+                <p>Введіть прізвище:</p>
+                <input type="text" name="MiddleName" />
+                <p>Введіть e-mail:</p>
+                <input type="text" name="UserEmail" />
+                <p>Введіть телефон:</p>
+                <input type="text" name="UserPhone" />
+                <input type="submit" value="Отправить" />
+            </form>
+        </section>
+    </div>
+</div>

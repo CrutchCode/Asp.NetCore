@@ -12,7 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using _PlastSiteMVC.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace _3DPlastSiteMVC
+namespace _PlastSiteMVC
 {
     public class Startup
     {

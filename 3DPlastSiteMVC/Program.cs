@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace _3DPlastSiteMVC
+namespace _PlastSiteMVC
 {
     public class Program
     {

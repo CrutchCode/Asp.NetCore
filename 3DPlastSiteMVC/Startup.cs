@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using _3DPlastSiteMVC.Models;
+using _PlastSiteMVC.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace _3DPlastSiteMVC

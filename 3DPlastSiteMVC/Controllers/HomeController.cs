@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using _3DPlastSiteMVC.Models;
+using _PlastSiteMVC.Models;
 
-namespace _3DPlastSiteMVC.Controllers
+namespace _PlastSiteMVC.Controllers
 {
     public class HomeController : Controller
     {

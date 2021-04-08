@@ -1,6 +1,6 @@
 using System;
 
-namespace _3DPlastSiteMVC.Models
+namespace _PlastSiteMVC.Models
 {
     public class ErrorViewModel
     {

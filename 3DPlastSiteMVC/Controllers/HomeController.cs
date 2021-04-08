@@ -22,6 +22,14 @@ namespace _PlastSiteMVC.Controllers
         {
             return View();
         }
+        public IActionResult ContentPageOne()
+        {
+            return View();
+        }
+        public IActionResult ContentPageTwo()
+        {
+            return View();
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

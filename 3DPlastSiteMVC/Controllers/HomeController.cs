@@ -44,14 +44,10 @@ namespace _PlastSiteMVC.Controllers
         [HttpPost]
         public IActionResult LogIn(User user)
         {
-            var _courentUser = _dbContext.Users.FirstOrDefault();
-
-            if (user != null)
+            var userDb = _dbContext.Users.FirstOrDefault(us => us.UserLogin == user.UserLogin);
+            if (userDb != null)
             {
-                if (_courentUser.Name == user.Name)
-                {
-                    return View("Content");
-                }
+                return View("Content");
             }
             return View("Error");
         }
@@ -63,8 +59,15 @@ namespace _PlastSiteMVC.Controllers
         [HttpPost]
         public IActionResult SignUp(User user)
         {
-            _dbContext.Add(user);
-            _dbContext.SaveChanges();
+            if (user != null)
+            {
+                _dbContext.Add(user);
+                _dbContext.SaveChanges();
+            }
+            else
+            {
+                return View("Error");
+            }
             return Redirect("~/Home/Index");
         }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
